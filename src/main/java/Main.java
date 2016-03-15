@@ -16,7 +16,6 @@ import static spark.Spark.get;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import java.util.List;
-import static spark.Spark.get;
 
 public class Main {
 
