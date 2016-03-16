@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  */
 public class LoadFile {
      
-    //Mètodo que leer los datos de un archivo
+    //Metodo que leer los datos de un archivo
     public static List<ClassesInfo> loadDataFromFile(String fileName) {
         List<ClassesInfo> dataList = new ArrayList<>();
         File objFile = new File(fileName);
