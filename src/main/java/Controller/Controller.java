@@ -7,8 +7,8 @@ package Controller;
 
 import Model.Calculation;
 import Model.ClassesInfo;
-import Model.LoadData;
-import Model.SizeRange;
+import Model.LoadFile;
+import Model.StandarDeviation;
 import java.util.List;
 
 /**
@@ -17,14 +17,16 @@ import java.util.List;
  */
 public class Controller {
     
+    //Metodo que lee los datos de prueba del archivo.txt
     public List<ClassesInfo> loadClassInfo(String fileName) {
-        return LoadData.loadDataFromFile(fileName);
+        return LoadFile.loadDataFromFile(fileName);
     }
     
-    public SizeRange calculateSizeRange(List<ClassesInfo> classInfoList) {
-        SizeRange sizeRange = new SizeRange();
-        sizeRange.setAverage(Calculation.average(classInfoList));
-        sizeRange.setVariance(Calculation.variance(classInfoList));
-        return sizeRange;
+    //Metodo que calcula la regresion lineal para listado de datos de prueba
+    public StandarDeviation calculateSizeRange(List<ClassesInfo> classInfoList) {
+        StandarDeviation objStandarDeviation = new StandarDeviation();
+        objStandarDeviation.setAverage(Calculation.average(classInfoList));
+        objStandarDeviation.setVariance(Calculation.variance(classInfoList));
+        return objStandarDeviation;
     }
 }

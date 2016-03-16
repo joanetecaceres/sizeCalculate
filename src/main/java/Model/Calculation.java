@@ -12,35 +12,27 @@ import java.util.List;
  * @author carolina.caceres
  */
 public class Calculation {
-    
-    /**
-     *Calculates the average of a data set
-     * @param classInfoList Data set to calculate the average
-     * @return Average of the data set
-     */
+     
+    //Metodo que calcula el promedio
     public static double average(List<ClassesInfo> classInfoList) {
-        double sum = 0.0;
+        double sumatoria = 0.0;
         for(ClassesInfo element : classInfoList) {
-            sum += element.naturalLogarithmOfLocPerMethod();
+            sumatoria += element.naturalLogarithmOfLocPerMethod();
         }
         double listSize = (double)classInfoList.size();
-        double average = sum / listSize;
+        double average = sumatoria / listSize;
         return average;
     }
     
-    /**
-     *Calculates the variance of a data set
-     * @param classInfoList Data set to calculate the variance
-     * @return variance of the data set
-     */
+    //Metodo que calcula la varianza
     public static double variance(List<ClassesInfo> classInfoList) {
-        double sum = 0.0;
+        double sumatoria = 0.0;
         double average = average(classInfoList);
         for(ClassesInfo element : classInfoList) {
-            sum += Math.pow((element.naturalLogarithmOfLocPerMethod() - average), 2.0);
+            sumatoria += Math.pow((element.naturalLogarithmOfLocPerMethod() - average), 2.0);
         }
         double listSize = (double)classInfoList.size();
-        double variance = sum / (listSize - 1);
+        double variance = sumatoria / (listSize - 1);
         return variance;
     }
 }

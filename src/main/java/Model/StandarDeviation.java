@@ -9,7 +9,7 @@ package Model;
  *
  * @author carolina.caceres
  */
-public class SizeRange {
+public class StandarDeviation {
     
     private double verySmall;
     private double small;
@@ -19,134 +19,77 @@ public class SizeRange {
     private double average;
     private double variance;
 
-    /**
-     *VerySmall attribute getter
-     * @return very small value
-     */
+    //Obtiene el valor de la variable "VerySmall"
     public double getVerySmall() {
         return Math.pow(Math.E, (this.average - (2 * this.getStandardDeviation())));
     }
 
-    /**
-     *
-     * @param verySmall
-     */
+    //Asigna valor a la variable "VerySmall"
     public void setVerySmall(double verySmall) {
         this.verySmall = verySmall;
     }
 
-    /**
-     *Small attribute getter
-     * 
-     * @return small value
-     */
+    //Obtiene el valor de la variable "Small"
     public double getSmall() {
         return Math.pow(Math.E, (this.average - this.getStandardDeviation()));
     }
-
-    /**
-     *Small attribute setter
-     * 
-     * @param small
-     */
+    
+    //Asigna valor a la variable "Small("
     public void setSmall(double small) {
         this.small = small;
     }
-
-    /**
-     *Medium attribute getter
-     * 
-     * @return
-     */
+    
+    //Obtiene el valor de la variable "Medium"
     public double getMedium() {
         return Math.pow(Math.E, this.average);
     }
-
-    /**
-     *Medium attribute setter
-     * 
-     * @param medium
-     */
+  
+    //Asigna valor a la variable "Medium"
     public void setMedium(double medium) {
         this.medium = medium;
     }
-
-    /**
-     *Large attribute getter
-     * 
-     * @return
-     */
+ 
+    //Obtiene el valor de la variable "Large"
     public double getLarge() {
         return Math.pow(Math.E, (this.average + this.getStandardDeviation()));
     }
-
-    /**
-     *Large attribute setter
-     * 
-     * @param large
-     */
+    
+   //Asigna valor a la variable "Large"
     public void setLarge(double large) {
         this.large = large;
     }
 
-    /**
-     *VeryLarge attribute getter
-     * 
-     * @return
-     */
+    //Obtiene el valor de la variable "VeryLarge"
     public double getVeryLarge() {
         return Math.pow(Math.E, (this.average + (2 * this.getStandardDeviation())));
     }
-
-    /**
-     *VeryLarge attribute setter
-     * 
-     * @param veryLarge
-     */
+     
+   //Asigna valor a la variable "veryLarge"
     public void setVeryLarge(double veryLarge) {
         this.veryLarge = veryLarge;
     }
-
-    /**
-     *Average attribute getter
-     * 
-     * @return
-     */
+    
+    //Obtiene el valor de la variable "average"
     public double getAverage() {
         return average;
     }
 
-    /**
-     *Average attribute setter
-     * 
-     * @param average
-     */
+   //Asigna valor a la variable "average"
     public void setAverage(double average) {
         this.average = average;
     }
 
-    /**
-     *Variance attribute getter
-     * 
-     * @return
-     */
+   //Obtiene el valor de la variable "variance"
     public double getVariance() {
         return variance;
     }
-
-    /**
-     *Variance attribute setter
-     * 
-     * @param variance
-     */
+ 
+    //Asigna valor a la variable "variance"
     public void setVariance(double variance) {
         this.variance = variance;
     }
     
-    /**
-     *Calculates the standarDeviation using the value of the variance attribute
-     * @return
-     */
+    // Metodo que retorna la desviacion estandar**
     public double getStandardDeviation() {
         return Math.sqrt(this.variance);
     }

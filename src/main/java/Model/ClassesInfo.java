@@ -15,85 +15,47 @@ public class ClassesInfo {
     private double loc;
     private double numberOfMethods;
 
-     /**
-     *Empty constructor of the class 
-     */
+    
     public ClassesInfo() {
     }
     
-    /**
-     *Constructor of the class 
-     * 
-     * @param className name of the class
-     * @param loc number of lines of code
-     * @param numberOfMethods number of methods per class
-     */
     public ClassesInfo(String className, double loc, double numberOfMethods) {
         this.className = className;
         this.loc = loc;
         this.numberOfMethods = numberOfMethods;
     }
-
-    /**
-     *ClassName attribute getter
-     * 
-     * @return class name
-     */
+ 
+    //Metodo que obtiene el valor de la propiedad "getClassName"
     public String getClassName() {
         return className;
     }
-    
-    /**
-     *ClassName attribute setter
-     * 
-     * @param className
-     */
+     
+    //Metodo que asigna valor a la propiedad "setClassName"
     public void setClassName(String className) {
         this.className = className;
     }
-    
-    
-    /**
-     *loc attribute getter
-     * 
-     * @return loc value
-     */
+            
+    //Metodo que obtiene el valor de la propiedad "getLoc"
     public double getLoc() {
         return loc;
     }
 
-    /**
-     *loc attribute setter
-     * 
-     * @param loc
-     */
+    //Metodo que asigna valor a la propiedad "setLoc"
     public void setLoc(double loc) {
         this.loc = loc;
     }
 
-    /**
-     *Number of methods attribute getter
-     * 
-     * @return number of methods
-     */
+    //Metodo que obtiene el valor de la propiedad "getNumberOfMethods"
     public double getNumberOfMethods() {
         return numberOfMethods;
     }
 
-    /**
-     *Number of methods attribute setter
-     * 
-     * @param numberOfMethods
-     */
+    //Metodo que asigna valor a la propiedad "setNumberOfMethods"
     public void setNumberOfMethods(double numberOfMethods) {
         this.numberOfMethods = numberOfMethods;
     }
-    
-    /**
-     *Calculates the natural logarithm of the loc and number of loc per method
-     * 
-     * @return natural logarithm of loc per method
-     */
+     
+    //Metodo que calcula el logaritmo natural de las lineas de codigo y numero de lineas de codigo por metodo   
     public double naturalLogarithmOfLocPerMethod() {
         return Math.log(this.loc / this.numberOfMethods);
     }

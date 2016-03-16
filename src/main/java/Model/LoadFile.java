@@ -21,17 +21,12 @@ import java.util.logging.Logger;
  *
  * @author carolina.caceres
  */
-public class LoadData {
-    
-    /**
-     *Load data from .txt file into a List of ClassesInfo objects
-     * 
-     * @param filename File to read the data
-     * @return classInfo list with the information read from the file
-     */
+public class LoadFile {
+     
+    //Mètodo que leer los datos de un archivo
     public static List<ClassesInfo> loadDataFromFile(String fileName) {
         List<ClassesInfo> dataList = new ArrayList<>();
-        File archive = new File(fileName);
+        File objFile = new File(fileName);
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
@@ -47,9 +42,9 @@ public class LoadData {
                 }
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoadData.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LoadFile.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(LoadData.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LoadFile.class.getName()).log(Level.SEVERE, null, ex);
         }
         return dataList;
     }
